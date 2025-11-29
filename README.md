@@ -1,70 +1,82 @@
-🛡 PDF Security Manager v2.0
+# 🛡 PDF Security Manager v2.0
 
-PDF Security Manager, Python kullanılarak geliştirilmiş, PDF dosyalarını hızlı ve güvenli şekilde şifrelemek (encrypt) ve şifrelerini çözmek (decrypt) için tasarlanmış gelişmiş bir komut satırı aracıdır (CLI).
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Active-success.svg)
+
+**PDF Security Manager**, Python kullanılarak geliştirilmiş, PDF dosyalarını hızlı ve güvenli şekilde şifrelemek (encrypt) ve şifrelerini çözmek (decrypt) için tasarlanmış gelişmiş bir komut satırı aracıdır (CLI).
+
 Bu proje; dosya işleme, hata yönetimi, kullanıcı etkileşimi ve harici kütüphane kullanımı açısından örnek bir uygulamadır.
 
-🚀 Özellikler
+---
 
-📂 Akıllı Dosya Algılama
-Çalışılan dizindeki tüm .pdf dosyaları otomatik olarak listelenir.
+## 🚀 Özellikler
 
-🔒 AES Şifreleme
-PDF’lerinizi güçlü şifreleme yöntemiyle korur.
+* **📂 Akıllı Dosya Algılama:** Çalışılan dizindeki tüm `.pdf` dosyaları otomatik olarak taranır ve listelenir.
+* **🔒 AES Şifreleme:** PDF’lerinizi güçlü şifreleme yöntemleriyle koruma altına alır.
+* **🔓 Şifre Çözme:** Şifresi bilinen kilitli PDF dosyalarının kilidini kaldırır.
+* **👀 Gizli Şifre Girişi:** Şifreler terminal üzerinde görünmeden (`getpass` modülü ile) güvenli bir şekilde alınır.
+* **🔄 Döngüsel Menü:** İşlem sonrasında program kapanmaz, kullanıcı çıkış yapana kadar ana menüye döner.
+* **🎨 Kullanıcı Dostu Arayüz:** Emoji destekli, sade ve anlaşılır CLI tasarımı.
 
-🔓 Şifre Çözme
-Şifresi bilinen kilitli PDF’leri açabilir.
+---
 
-👀 Gizli Şifre Girişi
-Şifreler getpass ile gizli şekilde alınır.
+## 🛠 Kurulum
 
-🔄 Döngüsel Menü
-İşlem sonrasında program kapanmaz, ana menüye döner.
+Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
 
-🎨 Kullanıcı Dostu Arayüz
-Emoji destekli sade ve anlaşılır CLI tasarımı.
+### 1. Gereksinimler
+* Python 3.x
+* `PyPDF2` kütüphanesi
 
-🛠 Kurulum
-1. Gereksinimler
+### 2. Projeyi İndirme
 
-Python 3.x
+Terminal veya komut satırını açın ve projeyi klonlayın:
 
-PyPDF2 kütüphanesi
-
-2. Projeyi İndirme
-git clone https://github.com/musayoncalik/-PDF-Security-Manager.git
+```bash
+git clone [https://github.com/musayoncalik/-PDF-Security-Manager.git](https://github.com/musayoncalik/-PDF-Security-Manager.git)
 cd -PDF-Security-Manager
+3. Gerekli Kütüphaneleri Yükleme
+Gerekli bağımlılıkları yüklemek için:
 
-3. Gerekli Kütüphaneyi Yükleme
-pip install PyPDF2
-
-
-Alternatif:
+Bash
 
 pip install -r requirements.txt
+Alternatif olarak manuel yükleme:
 
+Bash
+
+pip install PyPDF2
 💻 Kullanım
+Proje klasörü içerisindeyken aşağıdaki komutu çalıştırarak uygulamayı başlatın:
 
-Proje klasörüne girerek programı başlatın:
+Bash
 
 python pdf_security_manager.py
-
 🔧 İşleyiş Adımları
+Program açıldığında bulunduğunuz klasördeki PDF dosyaları otomatik listelenir.
 
-Program açıldığında klasördeki PDF dosyaları listelenir.
+İşlem yapmak istediğiniz dosya numarasını seçin.
 
-İşlem yapılacak dosyanın numarası seçilir.
+Yapmak istediğiniz işlemi seçin:
 
-[1] Şifrele veya [2] Şifreyi Çöz işlemlerinden biri seçilir.
+[1] Şifrele (Dosyayı kilitler)
 
-Şifre girilir.
+[2] Şifreyi Çöz (Kilidi kaldırır)
 
-Program, orijinal dosyayı değiştirmez; yeni bir dosya üretir:
+Şifreyi girin (veya belirleyin).
 
-_sifreli.pdf
+Program orijinal dosyayı bozmaz, işlemin sonucunu yeni bir dosya olarak kaydeder:
 
-_cozulmus.pdf
+dosyaadi_sifreli.pdf
+
+dosyaadi_cozulmus.pdf
 
 📷 Örnek Çıktı
+Program çalıştırıldığında terminalde aşağıdaki gibi bir arayüz ile karşılaşırsınız:
+
+Plaintext
+
 ******************************************
    🛡  PDF SECURITY MANAGER v2.0
 ******************************************
@@ -90,11 +102,12 @@ _cozulmus.pdf
 🔑 Oluşturulacak şifreyi girin: 
 
 ✅ BAŞARILI! Yeni dosya: maas_bordrosu_sifreli.pdf
-
 📂 Proje Yapısı
+Plaintext
+
 pdf-security-manager/
-├── pdf_security_manager.py         # Ana uygulama
-├── pdf_security_manager.ipynb      # Jupyter Notebook sürümü
-├── requirements.txt                # Gerekli kütüphaneler
-├── README.md                       # Proje dokümantasyonu
-└── .gitignore                      # Gereksiz dosyaların engellenmesi
+├── pdf_security_manager.py       # Ana uygulama kaynak kodu
+├── pdf_security_manager.ipynb    # Jupyter Notebook sürümü (Opsiyonel)
+├── requirements.txt              # Proje bağımlılıkları
+├── README.md                     # Proje dokümantasyonu
+└── .gitignore                    # Gereksiz dosyaların takibini engelleme
