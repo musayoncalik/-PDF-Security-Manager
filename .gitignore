@@ -1,0 +1,9 @@
+# PDF dosyalarını yükleme
+*.pdf
+
+# Jupyter Notebook yedeklerini yükleme
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Python önbelleğini yükleme
+__pycache__/
