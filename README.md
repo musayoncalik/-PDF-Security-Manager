@@ -21,41 +21,22 @@ Bu proje; dosya işleme, hata yönetimi, kullanıcı etkileşimi ve harici küt�
 
 ---
 
-## 🛠 Kurulum
+📂 Proje Yapısı
+```
+Plaintext
 
-Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
+pdf-security-manager/
+├── pdf_security_manager.py       # Ana uygulama kaynak kodu
+├── pdf_security_manager.ipynb    # Jupyter Notebook sürümü (Opsiyonel)
+├── requirements.txt              # Proje bağımlılıkları
+├── README.md                     # Proje dokümantasyonu
+└── .gitignore                    # Gereksiz dosyaların takibini engelleme
+```
 
-### 1. Gereksinimler
-* Python 3.x
-* `PyPDF2` kütüphanesi
-
-### 2. Projeyi İndirme
-
-Terminal veya komut satırını açın ve projeyi klonlayın:
-
-```bash
-git clone [https://github.com/musayoncalik/-PDF-Security-Manager.git](https://github.com/musayoncalik/-PDF-Security-Manager.git)
-cd -PDF-Security-Manager
-3. Gerekli Kütüphaneleri Yükleme
-Gerekli bağımlılıkları yüklemek için:
-
-Bash
-
-pip install -r requirements.txt
-Alternatif olarak manuel yükleme:
-
-Bash
-
-pip install PyPDF2
-💻 Kullanım
-Proje klasörü içerisindeyken aşağıdaki komutu çalıştırarak uygulamayı başlatın:
-
-Bash
-
-python pdf_security_manager.py
 🔧 İşleyiş Adımları
 Program açıldığında bulunduğunuz klasördeki PDF dosyaları otomatik listelenir.
 
+```
 İşlem yapmak istediğiniz dosya numarasını seçin.
 
 Yapmak istediğiniz işlemi seçin:
@@ -102,12 +83,38 @@ Plaintext
 🔑 Oluşturulacak şifreyi girin: 
 
 ✅ BAŞARILI! Yeni dosya: maas_bordrosu_sifreli.pdf
-📂 Proje Yapısı
-Plaintext
+```
 
-pdf-security-manager/
-├── pdf_security_manager.py       # Ana uygulama kaynak kodu
-├── pdf_security_manager.ipynb    # Jupyter Notebook sürümü (Opsiyonel)
-├── requirements.txt              # Proje bağımlılıkları
-├── README.md                     # Proje dokümantasyonu
-└── .gitignore                    # Gereksiz dosyaların takibini engelleme
+## 🛠 Kurulum
+
+Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
+
+### 1. Gereksinimler
+* Python 3.x
+* `PyPDF2` kütüphanesi
+
+### 2. Projeyi İndirme
+
+Terminal veya komut satırını açın ve projeyi klonlayın:
+
+```bash
+git clone [https://github.com/musayoncalik/-PDF-Security-Manager.git](https://github.com/musayoncalik/-PDF-Security-Manager.git)
+cd -PDF-Security-Manager
+3. Gerekli Kütüphaneleri Yükleme
+Gerekli bağımlılıkları yüklemek için:
+
+Bash
+
+pip install -r requirements.txt
+Alternatif olarak manuel yükleme:
+
+Bash
+
+pip install PyPDF2
+💻 Kullanım
+Proje klasörü içerisindeyken aşağıdaki komutu çalıştırarak uygulamayı başlatın:
+
+Bash
+
+python pdf_security_manager.py
+
