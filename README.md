@@ -33,29 +33,11 @@ pdf-security-manager/
 └── .gitignore                    # Gereksiz dosyaların takibini engelleme
 ```
 
-🔧 İşleyiş Adımları
-Program açıldığında bulunduğunuz klasördeki PDF dosyaları otomatik listelenir.
 
-```
-İşlem yapmak istediğiniz dosya numarasını seçin.
-
-Yapmak istediğiniz işlemi seçin:
-
-[1] Şifrele (Dosyayı kilitler)
-
-[2] Şifreyi Çöz (Kilidi kaldırır)
-
-Şifreyi girin (veya belirleyin).
-
-Program orijinal dosyayı bozmaz, işlemin sonucunu yeni bir dosya olarak kaydeder:
-
-dosyaadi_sifreli.pdf
-
-dosyaadi_cozulmus.pdf
 
 📷 Örnek Çıktı
 Program çalıştırıldığında terminalde aşağıdaki gibi bir arayüz ile karşılaşırsınız:
-
+```
 Plaintext
 
 ******************************************
